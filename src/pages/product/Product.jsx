@@ -29,9 +29,12 @@ const Product = () => {
     const fetchProducts = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`${process.env.BACKEND_URL}/api/products`, {
-          headers: { Authorization: `Bearer ${token}` },
-        });
+        const response = await axios.get(
+          `${process.env.BACKEND_URL}/api/products`,
+          {
+            headers: { Authorization: `Bearer ${token}` },
+          }
+        );
         const filtered = category
           ? response.data.products.filter(
               (product) => product.category === category
