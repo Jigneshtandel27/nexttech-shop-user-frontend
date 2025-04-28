@@ -35,6 +35,7 @@ const Product = () => {
             headers: { Authorization: `Bearer ${token}` },
           }
         );
+        console.log(process.env.REACT_APP_BACKEND_URL);
         const filtered = category
           ? response.data.products.filter(
               (product) => product.category === category
