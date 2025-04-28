@@ -17,7 +17,7 @@ const Contact = () => {
     e.preventDefault();
     if (token) {
       try {
-        await axios.post(`${process.env.BACKEND_URL}/api/contact`, data, {
+        await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/contact`, data, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

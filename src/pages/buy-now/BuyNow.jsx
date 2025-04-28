@@ -25,7 +25,7 @@ const BuyNow = () => {
           setLoading(true);
 
           const response = await axios.get(
-            `${process.env.BACKEND_URL}/api/cart/allCartData`,
+            `${process.env.REACT_APP_BACKEND_URL}/api/cart/allCartData`,
             {
               headers: {
                 Authorization: `Bearer ${token}`,
@@ -35,7 +35,7 @@ const BuyNow = () => {
           const cartItem = response.data.items;
 
           const productRequest = cartItem.map((value) =>
-            axios.get(`${process.env.BACKEND_URL}/api/products/${value.productId}`, {
+            axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/products/${value.productId}`, {
               headers: {
                 Authorization: `Bearer ${token}`,
               },
@@ -141,7 +141,7 @@ const BuyNow = () => {
         })),
         totalAmount: totalPrice,
       };
-      await axios.post(`${process.env.BACKEND_URL}/api/order`, orderData, {
+      await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/order`, orderData, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -179,10 +179,10 @@ const BuyNow = () => {
                 <div className="buy-now-img-container">
                   <img
                     className="buy-now-product-img"
-                    src={`${process.env.BACKEND_URL}/${product.image}`}
+                    src={`${process.env.REACT_APP_BACKEND_URL}/${product.image}`}
                     onClick={() =>
                       window.open(
-                        `${process.env.BACKEND_URL}/${product.image}`,
+                        `${process.env.REACT_APP_BACKEND_URL}/${product.image}`,
                         "_blank"
                       )
                     }
