@@ -18,7 +18,7 @@ const Detailspage = () => {
     try {
       setLoading(true);
       const response = await axios.post(
-        "http://localhost:2000/api/cart",
+        `${process.env.BACKEND_URL}/api/cart`,
         {
           productId: product._id,
           quantity: 1,
@@ -48,10 +48,10 @@ const Detailspage = () => {
           <div className="details-container">
             <img
               id="details-img"
-              src={`http://localhost:2000/${product.image}`}
+              src={`${process.env.BACKEND_URL}/${product.image}`}
               alt={product.name}
               onClick={() =>
-                window.open(`http://localhost:2000/${product.image}`, "_blank")
+                window.open(`${process.env.BACKEND_URL}/${product.image}`, "_blank")
               }
             />
             <div className="details-data">

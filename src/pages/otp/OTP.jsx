@@ -70,7 +70,7 @@ const OTP = () => {
       setLoading(true);
       setVerifyLoading(true);
       const response = await axios.post(
-        "http://localhost:2000/api/auth/verify-otp",
+        `${process.env.BACKEND_URL}/api/auth/verify-otp`,
         {
           email,
           otp: Number(finalOTP),
@@ -96,7 +96,7 @@ const OTP = () => {
     try {
       setResendLoading(true);
       const response = await axios.post(
-        "http://localhost:2000/api/auth/forgot-password",
+        `${process.env.BACKEND_URL}/api/auth/forgot-password`,
         { email }
       );
       if (response.data.success) {

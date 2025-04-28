@@ -29,7 +29,7 @@ const Product = () => {
     const fetchProducts = async () => {
       try {
         setLoading(true);
-        const response = await axios.get("http://localhost:2000/api/products", {
+        const response = await axios.get(`${process.env.BACKEND_URL}/api/products`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         const filtered = category
@@ -108,7 +108,7 @@ const Product = () => {
   const addProduct = async (product) => {
     try {
       const response = await axios.post(
-        "http://localhost:2000/api/cart",
+        `${process.env.BACKEND_URL}/api/cart`,
         {
           productId: product._id,
           quantity: 1,
@@ -148,10 +148,10 @@ const Product = () => {
                   <div className="products-img-container">
                     <img
                       className="products-product-img"
-                      src={`http://localhost:2000/${product.image}`}
+                      src={`${process.env.BACKEND_URL}/${product.image}`}
                       onClick={() =>
                         window.open(
-                          `http://localhost:2000/${product.image}`,
+                          `${process.env.BACKEND_URL}/${product.image}`,
                           "_blank"
                         )
                       }

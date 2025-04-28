@@ -27,7 +27,7 @@ const ChangePass = () => {
     try {
       setLoading(true);
       const response = await axios.put(
-        "http://localhost:2000/api/auth/reset-password",
+        `${process.env.BACKEND_URL}/api/auth/reset-password`,
         { email, newPassword: password }
         // {
         //   headers: {

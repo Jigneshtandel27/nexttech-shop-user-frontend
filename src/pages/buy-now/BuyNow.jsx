@@ -25,7 +25,7 @@ const BuyNow = () => {
           setLoading(true);
 
           const response = await axios.get(
-            "http://localhost:2000/api/cart/allCartData",
+            `${process.env.BACKEND_URL}/api/cart/allCartData`,
             {
               headers: {
                 Authorization: `Bearer ${token}`,
@@ -35,7 +35,7 @@ const BuyNow = () => {
           const cartItem = response.data.items;
 
           const productRequest = cartItem.map((value) =>
-            axios.get(`http://localhost:2000/api/products/${value.productId}`, {
+            axios.get(`${process.env.BACKEND_URL}/api/products/${value.productId}`, {
               headers: {
                 Authorization: `Bearer ${token}`,
               },
@@ -141,7 +141,7 @@ const BuyNow = () => {
         })),
         totalAmount: totalPrice,
       };
-      await axios.post("http://localhost:2000/api/order", orderData, {
+      await axios.post(`${process.env.BACKEND_URL}/api/order`, orderData, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -179,10 +179,10 @@ const BuyNow = () => {
                 <div className="buy-now-img-container">
                   <img
                     className="buy-now-product-img"
-                    src={`http://localhost:2000/${product.image}`}
+                    src={`${process.env.BACKEND_URL}/${product.image}`}
                     onClick={() =>
                       window.open(
-                        `http://localhost:2000/${product.image}`,
+                        `${process.env.BACKEND_URL}/${product.image}`,
                         "_blank"
                       )
                     }

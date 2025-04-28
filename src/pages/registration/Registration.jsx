@@ -41,7 +41,7 @@ const Registration = () => {
     try {
       setLoading(true);
       const response = await axios.post(
-        "http://localhost:2000/api/user/register",
+        `${process.env.BACKEND_URL}/api/user/register`,
         {
           name: formData.name,
           email: formData.email,

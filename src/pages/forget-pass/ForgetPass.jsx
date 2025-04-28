@@ -28,7 +28,7 @@ const ForgetPass = () => {
     try {
       setLoading(true);
       const response = await axios.post(
-        "http://localhost:2000/api/auth/forgot-password",
+        `${process.env.BACKEND_URL}/api/auth/forgot-password`,
         { email }
       );
       if (response.data.success) {

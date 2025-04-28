@@ -61,11 +61,14 @@ const HomePage = () => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const response = await axios.get("http://localhost:2000/api/products", {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
+        const response = await axios.get(
+          `${process.env.BACKEND_URL}/api/products`,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
         const Product = response.data.products.slice(0, 8);
         setProducts(Product);
         // console.log(Product);
@@ -145,7 +148,7 @@ const HomePage = () => {
               >
                 <img
                   className="selling-img"
-                  src={`http://localhost:2000/${product.image}`}
+                  src={`${process.env.BACKEND_URL}/${product.image}`}
                   alt={product.name}
                 />
                 <p className="selling-name">{product.name}</p>
