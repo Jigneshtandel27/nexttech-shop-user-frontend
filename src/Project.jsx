@@ -24,11 +24,14 @@ const Project = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get(`${process.env.BACKEND_URL}/api/products`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      const response = await axios.get(
+        `${process.env.REACT_APP_BACKEND_URL}/api/products`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
       setAllProducts(response.data.products);
       setFilteredProducts(response.data.products);
     };
@@ -38,7 +41,7 @@ const Project = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `${process.env.BACKEND_URL}/api/user/profile`,
+        `${process.env.REACT_APP_BACKEND_URL}/api/user/profile`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
