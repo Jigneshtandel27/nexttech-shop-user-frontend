@@ -27,7 +27,7 @@ const ChangePass = () => {
     try {
       setLoading(true);
       const response = await axios.put(
-        `${process.env.VITE_BACKEND_URL}/api/auth/reset-password`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/auth/reset-password`,
         { email, newPassword: password }
         // {
         //   headers: {

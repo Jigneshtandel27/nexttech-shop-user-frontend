@@ -25,7 +25,7 @@ const Project = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `${process.env.VITE_BACKEND_URL}/api/products`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/products`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -41,7 +41,7 @@ const Project = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `${process.env.VITE_BACKEND_URL}/api/user/profile`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/user/profile`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

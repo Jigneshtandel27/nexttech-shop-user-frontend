@@ -62,7 +62,7 @@ const HomePage = () => {
       try {
         setLoading(true);
         const response = await axios.get(
-          `${process.env.VITE_BACKEND_URL}/api/products`,
+          `${import.meta.env.VITE_BACKEND_URL}/api/products`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -148,7 +148,7 @@ const HomePage = () => {
               >
                 <img
                   className="selling-img"
-                  src={`${process.env.VITE_BACKEND_URL}/${product.image}`}
+                  src={`${import.meta.env.VITE_BACKEND_URL}/${product.image}`}
                   alt={product.name}
                 />
                 <p className="selling-name">{product.name}</p>

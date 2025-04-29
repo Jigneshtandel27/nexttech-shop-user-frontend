@@ -31,7 +31,7 @@ const AddtoCart = () => {
       try {
         setLoading(true);
         const response = await axios.get(
-          `${process.env.VITE_BACKEND_URL}/api/cart/allCartData`,
+          `${import.meta.env.VITE_BACKEND_URL}/api/cart/allCartData`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -41,7 +41,7 @@ const AddtoCart = () => {
         const cartItems = response.data.items;
         // console.log(cartItems);
         const productRequests = cartItems.map((value) =>
-          axios.get(`${process.env.VITE_BACKEND_URL}/api/products/${value.productId}`, {
+          axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/products/${value.productId}`, {
             headers: {
               Authorization: `Bearer ${token}`,
             },
@@ -67,7 +67,7 @@ const AddtoCart = () => {
 
   const removeFromCart = async (id) => {
     try {
-      await axios.delete(`${process.env.VITE_BACKEND_URL}/api/cart/${id}`, {
+      await axios.delete(`${import.meta.env.VITE_BACKEND_URL}/api/cart/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -91,7 +91,7 @@ const AddtoCart = () => {
     const newQty = currentQty - 1;
     try {
       await axios.put(
-        `${process.env.VITE_BACKEND_URL}/api/cart/${id}`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/cart/${id}`,
         {
           quantity: newQty,
         },
@@ -118,7 +118,7 @@ const AddtoCart = () => {
     const newQty = currentQty + 1;
     try {
       await axios.put(
-        `${process.env.VITE_BACKEND_URL}/api/cart/${id}`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/cart/${id}`,
         {
           quantity: newQty,
         },
@@ -140,7 +140,7 @@ const AddtoCart = () => {
     try {
       if (newQty < 1) return;
       await axios.put(
-        `${process.env.VITE_BACKEND_URL}/api/cart/${id}`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/cart/${id}`,
         {
           quantity: newQty,
         },
@@ -202,11 +202,11 @@ const AddtoCart = () => {
                   <div className="addtocart-product" key={index}>
                     <img
                       id="addtocart-img"
-                      src={`${process.env.VITE_BACKEND_URL}/${product.image}`}
+                      src={`${import.meta.env.VITE_BACKEND_URL}/${product.image}`}
                       alt={product.name}
                       onClick={() =>
                         window.open(
-                          `${process.env.VITE_BACKEND_URL}/${product.image}`,
+                          `${import.meta.env.VITE_BACKEND_URL}/${product.image}`,
                           "_blank"
                         )
                       }
