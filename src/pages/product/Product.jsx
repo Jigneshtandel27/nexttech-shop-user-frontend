@@ -30,12 +30,12 @@ const Product = () => {
       try {
         setLoading(true);
         const response = await axios.get(
-          `${process.env.REACT_APP_BACKEND_URL}/api/products`,
+          `${process.env.VITE_BACKEND_URL}/api/products`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
         );
-        console.log(process.env.REACT_APP_BACKEND_URL);
+        console.log(process.env.VITE_BACKEND_URL);
         const filtered = category
           ? response.data.products.filter(
               (product) => product.category === category
@@ -112,7 +112,7 @@ const Product = () => {
   const addProduct = async (product) => {
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_BACKEND_URL}/api/cart`,
+        `${process.env.VITE_BACKEND_URL}/api/cart`,
         {
           productId: product._id,
           quantity: 1,
@@ -152,10 +152,10 @@ const Product = () => {
                   <div className="products-img-container">
                     <img
                       className="products-product-img"
-                      src={`${process.env.REACT_APP_BACKEND_URL}/${product.image}`}
+                      src={`${process.env.VITE_BACKEND_URL}/${product.image}`}
                       onClick={() =>
                         window.open(
-                          `${process.env.REACT_APP_BACKEND_URL}/${product.image}`,
+                          `${process.env.VITE_BACKEND_URL}/${product.image}`,
                           "_blank"
                         )
                       }

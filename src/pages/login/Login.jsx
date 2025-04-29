@@ -32,7 +32,7 @@ const Login = () => {
     try {
       setLoading(true);
       const response = await axios.post(
-        `${process.env.REACT_APP_BACKEND_URL}/api/user/login`,
+        `${process.env.VITE_BACKEND_URL}/api/user/login`,
         {
           email: loginData.email,
           password: loginData.password,
