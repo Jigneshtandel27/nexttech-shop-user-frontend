@@ -133,7 +133,7 @@ const Project = () => {
   return (
     <>
       <div className="bg-img">
-        <title>Document</title>
+        <title>NextTech Shop</title>
         <header>
           <nav className="navbar">
             <h1 className="logo">JIGNESH</h1>
