@@ -1,8 +1,38 @@
-# React + Vite
+# NextTech Shop – User Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+User-facing frontend for the **NextTech Shop** e-commerce platform.  
+Built with **React**, focusing on a responsive UI, smooth shopping experience, and seamless integration with the backend APIs.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+
+- React.js  
+- Axios (API calls)  
+- React Router (Client-side routing)  
+- Context API (State management)  
+- CSS for styling  
+
+---
+
+## Features
+
+- Browse and search products  
+- View product details and add items to cart  
+- User authentication & protected routes  
+- Cart management and checkout flow  
+- View order history and track orders  
+- Integration with backend REST APIs  
+- Responsive design for mobile and desktop  
+
+---
+
+## Project Structure
+
+```bash
+src/
+├── assets/         # Images, icons, and static files
+├── pages/          # User pages (Home, Product, Cart, Profile, Orders)
+├── styles/         # CSS styles
+├── main.jsx        # React entry point
+└── Project.jsx     # Main project component
