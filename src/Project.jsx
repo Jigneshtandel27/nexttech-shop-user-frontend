@@ -1,4 +1,4 @@
-import "./Project.css";
+import "./styles/Project.css";
 import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
 import cartLogo from "/assets/icons/cart.png";
 import { useContext, useEffect, useRef, useState } from "react";
