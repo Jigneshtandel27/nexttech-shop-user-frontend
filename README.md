@@ -31,8 +31,9 @@ Built with **React**, focusing on a responsive UI, smooth shopping experience, a
 
 ```bash
 src/
-├── assets/         # Images, icons, and static files
+├── context/        # React Context for global state (Cart, User)
 ├── pages/          # User pages (Home, Product, Cart, Profile, Orders)
+├── data/           # Dummy data
 ├── styles/         # CSS styles
 ├── main.jsx        # React entry point
 └── Project.jsx     # Main project component
