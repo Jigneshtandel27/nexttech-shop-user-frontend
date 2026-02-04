@@ -1,10 +1,10 @@
 import "./Project.css";
 import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
-import cartLogo from "./assets/icons/cart.png";
+import cartLogo from "/assets/icons/cart.png";
 import { useContext, useEffect, useRef, useState } from "react";
 import axios from "axios";
-import user from "./assets/icons/profile.png";
-import { ProductContext } from "./pages/context/ProductContext";
+import user from "/assets/icons/profile.png";
+import { ProductContext } from "./context/ProductContext";
 
 const Project = () => {
   const location = useLocation();
@@ -30,7 +30,7 @@ const Project = () => {
           headers: {
             Authorization: `Bearer ${token}`,
           },
-        }
+        },
       );
       setAllProducts(response.data.products);
       setFilteredProducts(response.data.products);
@@ -46,7 +46,7 @@ const Project = () => {
           headers: {
             Authorization: `Bearer ${token}`,
           },
-        }
+        },
       );
       setUserData(response.data.user);
       // console.log(response.data.user);
@@ -97,7 +97,7 @@ const Project = () => {
       const filtered = allProducts.filter(
         (product) =>
           product.name.toLowerCase().includes(value.toLowerCase()) ||
-          product.category.toLowerCase().includes(value.toLowerCase())
+          product.category.toLowerCase().includes(value.toLowerCase()),
       );
       setSuggestions(filtered);
       setFilteredProducts(filtered);
@@ -111,7 +111,7 @@ const Project = () => {
     const filtered = allProducts.filter(
       (product) =>
         product.name.toLowerCase().includes(selectedValue.toLowerCase()) ||
-        product.category.toLowerCase().includes(selectedValue.toLowerCase())
+        product.category.toLowerCase().includes(selectedValue.toLowerCase()),
     );
 
     setFilteredProducts(filtered);

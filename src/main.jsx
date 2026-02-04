@@ -3,20 +3,20 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Project from "./Project";
-import Detailspage from "./pages/details/Detailspage";
-import AddtoCart from "./pages/addtocart/AddtoCart";
-import Login from "./pages/login/Login";
-import Registration from "./pages/registration/Registration";
-import ForgetPass from "./pages/forget-pass/ForgetPass";
-import ChangePass from "./pages/changepass/ChangePass";
-import OTP from "./pages/otp/OTP";
-import Contact from "./pages/contact/Contact";
-import Product from "./pages/product/Product";
-import Service from "./pages/service/Service";
-import BuyNow from "./pages/buy-now/BuyNow";
-import HomePage from "./pages/home/HomePage";
+import Detailspage from "./pages/Detailspage";
+import AddtoCart from "./pages/AddtoCart";
+import Login from "./pages/Login";
+import Registration from "./pages/Registration";
+import ForgetPass from "./pages/ForgetPass";
+import ChangePass from "./pages/ChangePass";
+import OTP from "./pages/OTP";
+import Contact from "./pages/Contact";
+import Product from "./pages/Product";
+import Service from "./pages/Service";
+import BuyNow from "./pages/BuyNow";
+import HomePage from "./pages/HomePage";
 import ProtectedRoute from "./pages/ProtectedRoute";
-import ProductProvider from "./pages/context/ProductContext";
+import ProductProvider from "./context/ProductContext";
 import { ToastContainer } from "react-toastify";
 
 createRoot(document.getElementById("root")).render(
@@ -53,5 +53,5 @@ createRoot(document.getElementById("root")).render(
         <ToastContainer position="top-center" autoClose={3000}></ToastContainer>
       </BrowserRouter>
     </ProductProvider>
-  </StrictMode>
+  </StrictMode>,
 );
