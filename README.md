@@ -14,8 +14,8 @@ https://ecommerce-frontend-b1zb.onrender.com
 
 Frontend for the ecommerce platform powered by:
 
-• Backend API → https://github.com/Jigneshtandel27/nexttech-shop-backend  
-• Admin Dashboard → https://github.com/Jigneshtandel27/nexttech-shop-admin-frontend
+• Backend API → https://github.com/Jigneshtandel27/nexttech-shop-backend-api.git  
+• Admin Dashboard → https://github.com/Jigneshtandel27/nexttech-shop-admin-dashboard.git
 
 ---
 
