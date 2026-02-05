@@ -5,6 +5,11 @@ Built with **React**, focusing on a responsive UI, smooth shopping experience, a
 
 ---
 
+## 🌐 Live Demo
+https://ecommerce-frontend-b1zb.onrender.com
+
+---
+
 ## 🏗️ System Architecture
 
 Frontend for the ecommerce platform powered by:
