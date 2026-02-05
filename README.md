@@ -5,6 +5,15 @@ Built with **React**, focusing on a responsive UI, smooth shopping experience, a
 
 ---
 
+## 🏗️ System Architecture
+
+Frontend for the ecommerce platform powered by:
+
+• Backend API → https://github.com/Jigneshtandel27/nexttech-shop-backend  
+• Admin Dashboard → https://github.com/Jigneshtandel27/nexttech-shop-admin-frontend
+
+---
+
 ## Tech Stack
 
 - React.js  
