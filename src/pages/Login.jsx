@@ -119,10 +119,10 @@ const Login = () => {
 
             {/* Remember Me & Forgot Password */}
             <div className="login-c2">
-              <label className="login-remember">
+              {/* <label className="login-remember">
                 <input className="login-input1" type="checkbox" />
                 Remember me
-              </label>
+              </label> */}
               <Link className="login-a2" to="/forget-pass">
                 Forgot Password?
               </Link>

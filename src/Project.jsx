@@ -247,7 +247,9 @@ const Project = () => {
         <Outlet />
 
         <footer>
-          <p className="project-text">© 2025 JIGNESH. All rights reserved.</p>
+          <p className="project-text">
+            © {new Date().getFullYear()} JIGNESH. All rights reserved.
+          </p>
           <div className="footer-links">
             <a href="#">Privacy Policy</a>
             <a href="#">Shipping & Returns</a>

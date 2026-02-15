@@ -174,12 +174,14 @@ const Product = () => {
                   <p className="products-stock">
                     Only {product.stock} left in stock.
                   </p>
-                  <button
-                    className="products-add-btn"
-                    onClick={() => addProduct(product)}
-                  >
-                    Add to Cart
-                  </button>
+                  {token && (
+                    <button
+                      className="products-add-btn"
+                      onClick={() => addProduct(product)}
+                    >
+                      Add to Cart
+                    </button>
+                  )}
                   <p
                     className="products-more-details"
                     onClick={() => seeDetails(product)}

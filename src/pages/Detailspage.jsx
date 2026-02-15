@@ -26,7 +26,7 @@ const Detailspage = () => {
           headers: {
             authorization: `Bearer ${token}`,
           },
-        }
+        },
       );
       toast.success("Product added to cart!");
     } catch (error) {
@@ -50,7 +50,10 @@ const Detailspage = () => {
               src={`${import.meta.env.VITE_BACKEND_URL}/${product.image}`}
               alt={product.name}
               onClick={() =>
-                window.open(`${import.meta.env.VITE_BACKEND_URL}/${product.image}`, "_blank")
+                window.open(
+                  `${import.meta.env.VITE_BACKEND_URL}/${product.image}`,
+                  "_blank",
+                )
               }
             />
             <div className="details-data">
@@ -77,12 +80,14 @@ const Detailspage = () => {
               <p className="details-buy-btn" onClick={() => buyNow(product)}>
                 Buy Now
               </p>
-              <button
-                onClick={() => addtoCart(product)}
-                className="details-add-btn"
-              >
-                Add to Cart
-              </button>
+              {token && (
+                <button
+                  onClick={() => addtoCart(product)}
+                  className="details-add-btn"
+                >
+                  Add to Cart
+                </button>
+              )}
 
               <Link to="/products" className="details-btn">
                 Back to Products

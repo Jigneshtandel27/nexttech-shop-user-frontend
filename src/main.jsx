@@ -29,25 +29,22 @@ createRoot(document.getElementById("root")).render(
           <Route path="/forget-pass" element={<ForgetPass />} />
           <Route path="/change-pass" element={<ChangePass />} />
           <Route path="/OTP" element={<OTP />} />
-          <Route path="" element={<Project />}>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/products" element={<Product />} />
-            <Route path="/services" element={<Service />} />
-            <Route path="/contact" element={<Contact />} />
+          <Route path="/" element={<Project />}>
+            <Route index element={<HomePage />} />
+            <Route path="products" element={<Product />} />
+            <Route path="services" element={<Service />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="more-details" element={<Detailspage />} />
             <Route
-              path="/addtocart"
+              path="addtocart"
               element={<ProtectedRoute element={<AddtoCart />} />}
             />
             <Route
-              path="/more-details"
-              element={<ProtectedRoute element={<Detailspage />} />}
-            />
-            <Route
-              path="/buy-now"
+              path="buy-now"
               element={<ProtectedRoute element={<BuyNow />} />}
             />
-            {/* <Route path="/wishlist" element={<Wishlist />} /> */}
-            {/* <Route path="/" element={}/> */}
+
+            {/* <Route path="wishlist" element={<Wishlist />} /> */}
           </Route>
         </Routes>
         <ToastContainer position="top-center" autoClose={3000}></ToastContainer>

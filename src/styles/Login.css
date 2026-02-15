@@ -134,7 +134,7 @@
 }
 .login-c2 {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
 }
 .login-remember {
   display: flex;
